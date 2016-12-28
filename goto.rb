@@ -1,14 +1,35 @@
-
 class Goto < Formula
-  desc ""
-  homepage ""
-  url "https://github.com/biancasubion/goto/archive/1.0.1.tar.gz"
-  version "1.0.1"
-  sha256 "afa63e118896a77062195a80e5f3011a38873c4e39174c2d6e9ee267b1a2a26e"
+    include Language::Python::Virtualenv
+
+    desc ""
+    homepage ""
+    url "https://github.com/biancasubion/goto/archive/1.3.0.tar.gz"
+    head "https://github.com/biancasubion/goto.git"
+    sha256 "3768ba08063a7c044245fc46e5497a3374f3dd4142dee5810c9a0c73c7707152"
+
+    depends_on :python if MacOS.version <= :snow_leopard
 
 
-  def install
-      bin.install "me"
+
+    resource "flask" do
+	url "https://pypi.python.org/packages/source/F/Flask/Flask-0.10.1.tar.gz"
+	sha256 "4c83829ff83d408b5e1d4995472265411d2c414112298f2eb4b359d9e4563373"
+    end
+
+    resource "jinja2" do
+	url "https://pypi.python.org/packages/source/J/Jinja2/Jinja2-2.8.tar.gz"
+	sha256 "bc1ff2ff88dbfacefde4ddde471d1417d3b304e8df103a7a9437d47269201bf4"
+    end
+
+  resource "werkzeug" do
+    url "https://pypi.python.org/packages/source/W/Werkzeug/Werkzeug-0.10.4.tar.gz"
+    sha256 "9d2771e4c89be127bc4bac056ab7ceaf0e0064c723d6b6e195739c3af4fd5c1d"
   end
 
+    def install
+	virtualenv_install_with_resources
+        bin.install "me"
+        prefix.install Dir["./*"]
+    end 
 end
+
