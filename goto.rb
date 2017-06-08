@@ -3,9 +3,9 @@ class Goto < Formula
 
     desc ""
     homepage ""
-    url "https://github.com/biancasubion/goto/archive/1.3.0.tar.gz"
+    url "https://github.com/biancasubion/goto/archive/1.3.1.tar.gz"
     head "https://github.com/biancasubion/goto.git"
-    sha256 "3768ba08063a7c044245fc46e5497a3374f3dd4142dee5810c9a0c73c7707152"
+    sha256 "514658a9ee06f239ff6d68c24025b59644692de1b3b8ff04d5086645b90bb927"
 
     depends_on :python if MacOS.version <= :snow_leopard
 
