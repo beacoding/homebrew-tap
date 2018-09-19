@@ -5,7 +5,7 @@ class Goto < Formula
     homepage ""
     url "https://github.com/biancasubion/goto/archive/1.3.5.tar.gz"
     head "https://github.com/biancasubion/goto.git"
-    sha256 "972d1898f37083078e86c0297eb66d718b292698a1ef1a70f17bb0534225ad59"
+    sha256 "417367720132a9917db61306af32965217b011e7e7e8e145cf3e18350929ac77"
 
     depends_on :python if MacOS.version <= :snow_leopard
 
