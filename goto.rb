@@ -3,7 +3,7 @@ class Goto < Formula
 
     desc ""
     homepage ""
-    url "https://github.com/biancasubion/goto/archive/1.3.4.tar.gz"
+    url "https://github.com/biancasubion/goto/archive/1.3.5.tar.gz"
     head "https://github.com/biancasubion/goto.git"
     sha256 "972d1898f37083078e86c0297eb66d718b292698a1ef1a70f17bb0534225ad59"
 
@@ -28,7 +28,7 @@ class Goto < Formula
 
     def install
 	virtualenv_install_with_resources
-        bin.install "me"
+        bin.install "goto"
         prefix.install Dir["./*"]
     end 
 end
