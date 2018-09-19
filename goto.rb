@@ -3,7 +3,7 @@ class Goto < Formula
 
     desc ""
     homepage ""
-    url "https://github.com/biancasubion/goto/archive/1.3.2.tar.gz"
+    url "https://github.com/biancasubion/goto/archive/1.3.3.tar.gz"
     head "https://github.com/biancasubion/goto.git"
     sha256 "9269ac6f2c79ef69d0437c573cf1ee4cf35b0b8fde202b605828c317d5f81a3e"
 
